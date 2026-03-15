@@ -157,3 +157,104 @@ footer {
 .footer-right {
     text-align: right;
 }
+
+/* LINKS */
+
+a{
+text-decoration:none;
+color:#2f6f86;
+}
+
+a:hover{
+text-decoration:underline;
+}
+
+/* SIGNUP BUTTON */
+
+.signup-card button{
+margin-top:20px;
+padding:12px;
+background:#2f6f86;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:16px;
+width:100%;
+}
+
+.signup-card button:hover{
+opacity:0.9;
+}
+
+/* PASSWORD STRENGTH */
+
+#strength{
+font-size:13px;
+margin-top:4px;
+text-align:left;
+color:#555;
+}
+
+/* SIGNUP MESSAGE */
+
+#signupMessage{
+margin-top:10px;
+font-size:14px;
+color:red;
+text-align:left;
+}
+
+/* CHECKBOX ALIGNMENT */
+
+label input[type="checkbox"]{
+width:auto;
+margin-right:6px;
+}
+
+form label:nth-of-type(5),
+form label:nth-of-type(6){
+display:flex;
+align-items:center;
+font-size:14px;
+}
+
+/* INPUT FOCUS */
+
+input:focus{
+outline:none;
+border:1px solid #2f6f86;
+box-shadow:0 0 4px rgba(47,111,134,0.3);
+}
+
+/* FOOTER LINKS */
+
+.footer-right a{
+color:#2f6f86;
+font-weight:500;
+}
+
+.footer-right a:hover{
+text-decoration:underline;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:700px){
+
+.signup-card{
+width:90%;
+padding:30px;
+}
+
+.footer-container{
+flex-direction:column;
+gap:10px;
+text-align:center;
+}
+
+.footer-right{
+text-align:center;
+}
+
+}

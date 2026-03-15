@@ -150,3 +150,106 @@ button {
     background: #e74c3c;
     color: white;
 }
+
+/* NAVBAR LINKS */
+
+ul li a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+ul li a:hover{
+color:#1f6d95;
+}
+
+/* NOTIFICATION */
+
+#notification{
+position:fixed;
+top:20px;
+right:20px;
+background:#1f6d95;
+color:white;
+padding:12px 20px;
+border-radius:6px;
+display:none;
+box-shadow:0 4px 12px rgba(0,0,0,0.2);
+z-index:1000;
+}
+
+/* SEARCH FILTER BUTTON */
+
+.search-filter button{
+background:#1f6d95;
+color:white;
+border:none;
+padding:8px 14px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.search-filter button:hover{
+opacity:0.9;
+}
+
+/* ADD PATIENT LINK */
+
+.add-btn a{
+color:white;
+text-decoration:none;
+font-weight:500;
+}
+
+/* TABLE BUTTONS */
+
+table button{
+background:#1f6d95;
+color:white;
+margin-right:5px;
+}
+
+table button:last-child{
+background:#e74c3c;
+}
+
+/* HOVER EFFECT */
+
+table button:hover{
+opacity:0.9;
+}
+
+/* TABLE ROW HOVER */
+
+tbody tr:hover{
+background:#f5f9fc;
+}
+
+/* INPUT FOCUS */
+
+input:focus,
+select:focus{
+outline:none;
+border:1px solid #1f6d95;
+box-shadow:0 0 4px rgba(31,109,149,0.3);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.page-title{
+flex-direction:column;
+gap:15px;
+align-items:flex-start;
+}
+
+.search-filter{
+flex-wrap:wrap;
+}
+
+.table-section{
+overflow-x:auto;
+}
+
+}

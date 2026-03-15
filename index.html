@@ -7,11 +7,9 @@
     <title>LungAI Diagnosis System</title>
 
     <link rel="stylesheet" href="index.css">
-
 </head>
 
 <body>
-        <script src="index.js"></script>
 
     <!-- NAVBAR -->
 
@@ -57,10 +55,7 @@
             </p>
 
             <div class="hero-buttons">
-
-                <!-- <button class="primary-btn">Upload Scan</button> -->
                 <button class="secondary-btn">View Demo</button>
-
             </div>
 
         </div>
@@ -124,7 +119,7 @@
     </section>
 
 
-    <!-- PERFORMANCE -->
+    <!-- PERFORMANCE (COUNTERS ADDED) -->
 
     <section class="performance">
 
@@ -133,23 +128,23 @@
         <div class="stats">
 
             <div class="card">
+                <h2 id="patients">0</h2>
+                <p>Patients Analyzed</p>
+            </div>
+
+            <div class="card">
+                <h2 id="scans">0</h2>
+                <p>Scans Processed</p>
+            </div>
+
+            <div class="card">
+                <h2 id="reports">0</h2>
+                <p>Reports Generated</p>
+            </div>
+
+            <div class="card">
                 <h3>94%</h3>
                 <p>Detection Accuracy</p>
-            </div>
-
-            <div class="card">
-                <h3>&lt; 5s</h3>
-                <p>Fast Analysis Time</p>
-            </div>
-
-            <div class="card">
-                <h3>5+</h3>
-                <p>Disease Detected</p>
-            </div>
-
-            <div class="card">
-                <h3>10,000+</h3>
-                <p>Scans Analyzed</p>
             </div>
 
         </div>
@@ -165,22 +160,22 @@
 
         <div class="feature-grid">
 
-            <div class="feature">
+            <div class="feature reveal">
                 <h4>Early Disease Detection</h4>
                 <p>Identify lung issues early</p>
             </div>
 
-            <div class="feature">
+            <div class="feature reveal">
                 <h4>Detailed AI Reports</h4>
                 <p>Comprehensive diagnostic results</p>
             </div>
 
-            <div class="feature">
+            <div class="feature reveal">
                 <h4>Fast & Reliable</h4>
                 <p>Results within seconds</p>
             </div>
 
-            <div class="feature">
+            <div class="feature reveal">
                 <h4>Secure Data Protection</h4>
                 <p>HIPAA compliant security</p>
             </div>
@@ -190,6 +185,45 @@
     </section>
 
 
+    <!-- IMAGE SLIDER -->
+
+    <section class="slider">
+
+        <h2>AI Scan Examples</h2>
+
+        <div class="slider-container">
+
+            <img class="slide" src="img1.jpg">
+            <img class="slide" src="img2.jpg">
+            <img class="slide" src="img3.jpg">
+
+        </div>
+
+    </section>
+
+
+    <!-- SCROLL ANIMATION SECTION -->
+
+    <section class="info-section">
+
+        <div class="reveal">
+            <h2>Advanced AI Technology</h2>
+            <p>
+                PulmoAI uses deep learning algorithms to detect early lung diseases
+                from X-rays and CT scans with high precision.
+            </p>
+        </div>
+
+        <div class="reveal">
+            <h2>Doctor Friendly Interface</h2>
+            <p>
+                Easy to upload scans, analyze results, and generate medical reports
+                within seconds.
+            </p>
+        </div>
+
+    </section>
+
 
     <!-- FOOTER CTA -->
 
@@ -197,9 +231,12 @@
 
         <h2>Start AI-Based Lung Diagnosis Today</h2>
 
-
     </section>
 
+
+    <!-- JAVASCRIPT -->
+
+    <script src="index.js"></script>
 
 </body>
 

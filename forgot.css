@@ -145,3 +145,100 @@ font-size:13px;
 .footer-right{
 text-align:right;
 }
+
+/* LINK STYLE */
+
+a{
+text-decoration:none;
+color:#2f6f86;
+}
+
+a:hover{
+text-decoration:underline;
+}
+
+/* OTP SECTION */
+
+#otpSection{
+margin-top:20px;
+padding-top:10px;
+border-top:1px solid #ddd;
+display:flex;
+flex-direction:column;
+}
+
+#otpSection h3{
+margin-bottom:10px;
+}
+
+/* RESET PASSWORD SECTION */
+
+#resetSection{
+margin-top:20px;
+padding-top:10px;
+border-top:1px solid #ddd;
+display:flex;
+flex-direction:column;
+}
+
+#resetSection h3{
+margin-bottom:10px;
+}
+
+/* OTP + RESET BUTTONS */
+
+#otpSection button,
+#resetSection button{
+background:#2f6f86;
+color:white;
+border:none;
+padding:10px;
+border-radius:6px;
+cursor:pointer;
+margin-top:5px;
+}
+
+#otpSection button:hover,
+#resetSection button:hover{
+opacity:0.9;
+}
+
+/* INPUT FOCUS */
+
+input:focus{
+outline:none;
+border:1px solid #2f6f86;
+box-shadow:0 0 4px rgba(47,111,134,0.3);
+}
+
+/* FOOTER LINKS */
+
+.footer-right a{
+color:#2f6f86;
+font-weight:500;
+}
+
+.footer-right a:hover{
+text-decoration:underline;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:700px){
+
+.forgot-card{
+width:90%;
+padding:30px;
+}
+
+.footer-container{
+flex-direction:column;
+gap:10px;
+text-align:center;
+}
+
+.footer-right{
+text-align:center;
+}
+
+}

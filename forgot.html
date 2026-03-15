@@ -10,7 +10,6 @@
 </head>
 
 <body>
-    <script src="forgot.js"></script>
 
     <!-- NAVBAR -->
 
@@ -43,16 +42,49 @@
                 Enter your registered email address to receive password reset instructions.
             </p>
 
-            <form>
+
+            <!-- EMAIL FORM -->
+
+            <form onsubmit="return validateEmail()">
 
                 <label>Email Address</label>
-                <input type="email" placeholder="Enter your email">
+                <input id="email" type="email" placeholder="Enter your email">
 
-                <button class="reset-btn">Reset Password</button>
+                <button type="submit" class="reset-btn">Send OTP</button>
 
-                <p class="back">Remember your password? <span><a href="login.html">login</a></span></p>
+                <p class="back">Remember your password? 
+                    <span><a href="login.html">login</a></span>
+                </p>
 
             </form>
+
+
+            <!-- OTP SECTION -->
+
+            <div id="otpSection" style="display:none">
+
+                <h3>Enter OTP</h3>
+
+                <input id="otp" placeholder="Enter OTP">
+
+                <button onclick="verifyOTP()">Verify OTP</button>
+
+            </div>
+
+
+            <!-- RESET PASSWORD SECTION -->
+
+            <div id="resetSection" style="display:none">
+
+                <h3>Reset Password</h3>
+
+                <input id="newPassword" type="password" placeholder="New Password">
+
+                <input id="confirmPassword" type="password" placeholder="Confirm Password">
+
+                <button onclick="resetPassword()">Reset Password</button>
+
+            </div>
 
         </div>
 
@@ -83,6 +115,11 @@
         </div>
 
     </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="forgot.js"></script>
 
 </body>
 

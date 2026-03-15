@@ -7,11 +7,9 @@
     <title>Contact Us</title>
 
     <link rel="stylesheet" href="contact.css">
-
 </head>
 
 <body>
-    <script src="contact.js"></script>
 
     <!-- NAVBAR -->
 
@@ -77,30 +75,49 @@
 
         <h2>Contact Form</h2>
 
-        <form>
+        <form id="contactForm" onsubmit="return validateContactForm()">
 
             <div class="form-row">
 
                 <div class="input-box">
                     <label>Name</label>
-                    <input type="text">
+                    <input id="name" type="text" placeholder="Your Name">
                 </div>
 
                 <div class="input-box">
                     <label>Email</label>
-                    <input type="email">
+                    <input id="email" type="email" placeholder="Your Email">
                 </div>
 
             </div>
 
             <label>Message</label>
-            <textarea rows="5"></textarea>
+            <textarea id="message" rows="5" placeholder="Your Message"></textarea>
 
-            <button class="send-btn">Send Message</button>
+            <p id="charCount">0 characters</p>
+
+            <button type="submit" class="send-btn">Send Message</button>
 
         </form>
 
     </section>
+
+
+    <!-- SUCCESS POPUP -->
+
+    <div id="contactPopup" class="popup">
+
+        <div class="popup-box">
+
+            <h3>Message Sent Successfully</h3>
+
+            <p>We will contact you soon.</p>
+
+            <button onclick="closePopup()">OK</button>
+
+        </div>
+
+    </div>
 
 
     <!-- FOOTER -->
@@ -129,6 +146,11 @@
         </div>
 
     </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="contact.js"></script>
 
 </body>
 

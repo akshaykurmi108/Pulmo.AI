@@ -338,3 +338,117 @@ align-items:flex-start;
 }
 
 }
+
+/* NAVBAR LINKS */
+
+ul li a{
+text-decoration:none;
+color:#333;
+}
+
+ul li a:hover{
+color:#1f6d95;
+}
+
+/* PROFILE INPUTS */
+
+.editable{
+display:block;
+margin-top:8px;
+padding:8px;
+border-radius:6px;
+border:1px solid #ccc;
+width:260px;
+}
+
+/* PROFILE BUTTONS */
+
+.profile-left button{
+background:#1f6d95;
+color:white;
+border:none;
+padding:8px 16px;
+border-radius:6px;
+margin-top:10px;
+margin-right:10px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.profile-left button:hover{
+background:#155a78;
+}
+
+/* NOTIFICATION */
+
+#notification{
+position:fixed;
+top:20px;
+right:20px;
+background:#1f6d95;
+color:white;
+padding:12px 20px;
+border-radius:6px;
+display:none;
+box-shadow:0 4px 12px rgba(0,0,0,0.2);
+z-index:1000;
+}
+
+/* SEARCH INPUT FIX */
+
+#searchPatient{
+padding:10px;
+width:250px;
+border-radius:20px;
+border:1px solid #ccc;
+margin-bottom:15px;
+}
+
+/* QUICK SCAN TITLE */
+
+.quick-scan h2{
+margin-right:20px;
+}
+
+/* QUICK SCAN BUTTON HOVER */
+
+.analyze:hover{
+transform:scale(1.05);
+}
+
+/* TABLE ACTION */
+
+table td:last-child{
+color:#1f6d95;
+font-weight:600;
+cursor:pointer;
+}
+
+table td:last-child:hover{
+text-decoration:underline;
+}
+
+/* ACTIVITY LIST STYLE */
+
+.activity li{
+padding:4px 0;
+border-bottom:1px solid #eee;
+}
+
+/* MOBILE IMPROVEMENTS */
+
+@media(max-width:900px){
+
+.profile-right img{
+width:200px;
+}
+
+#searchPatient{
+width:100%;
+}
+
+.quick-scan{
+width:100%;
+}
+
+}

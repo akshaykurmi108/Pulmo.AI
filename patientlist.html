@@ -7,6 +7,9 @@
 </head>
 
 <body>
+
+    <div id="notification"></div>
+
     <script src="patientlist.js"></script>
 
     <!-- NAVBAR -->
@@ -41,15 +44,20 @@
 
         <div class="search-filter">
 
-            <input type="text" placeholder="Search Patient">
+            <!-- SEARCH INPUT -->
+            <input id="searchPatient" onkeyup="searchPatient()" placeholder="Search Patient">
 
-            <select>
+            <!-- GENDER FILTER -->
+            <select id="genderFilter" onchange="filterGender()">
                 <option>All</option>
-                <option>CT Scan</option>
-                <option>X-Ray</option>
+                <option>Male</option>
+                <option>Female</option>
             </select>
 
-            <button class="add-btn"> <a href="add-patient.html">+ Add Patient</a></button>
+            <!-- SORT BUTTON -->
+            <button onclick="sortPatients()">Sort by Name</button>
+
+            <button class="add-btn"><a href="add-patient.html">+ Add Patient</a></button>
 
         </div>
 
@@ -60,59 +68,62 @@
 
     <section class="table-section">
 
-        <table>
+        <table id="patientTable">
 
-            <tr>
-                <th>Patient ID</th>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Gender</th>
-                <th>Scan Type</th>
-                <th>Status</th>
-                <th>Actions</th>
-            </tr>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Scan Type</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
 
-            <tr>
-                <td>P1023</td>
-                <td>Rahul Shelby</td>
-                <td>45</td>
-                <td>Male</td>
-                <td>CT Scan</td>
-                <td class="complete">Completed</td>
-                <td>
-                    <button class="view"><a href="patient.html">View</a></button>
-                    <button class="edit">Edit</button>
-                    <button class="delete">Delete</button>
-                </td>
-            </tr>
+            <tbody>
 
-            <tr>
-                <td>P1041</td>
-                <td>Anita Sharma</td>
-                <td>38</td>
-                <td>Female</td>
-                <td>X-Ray</td>
-                <td class="processing">Processing</td>
-                <td>
-                    <button class="view">View</button>
-                    <button class="edit">Edit</button>
-                    <button class="delete">Delete</button>
-                </td>
-            </tr>
+                <tr>
+                    <td>P1023</td>
+                    <td>Rahul Shelby</td>
+                    <td>45</td>
+                    <td>Male</td>
+                    <td>CT Scan</td>
+                    <td class="complete">Completed</td>
+                    <td>
+                        <button onclick="viewPatient()">View</button>
+                        <button onclick="deletePatient(this)">Delete</button>
+                    </td>
+                </tr>
 
-            <tr>
-                <td>P1050</td>
-                <td>Kamal Verma</td>
-                <td>50</td>
-                <td>Male</td>
-                <td>CT Scan</td>
-                <td class="pending">Pending</td>
-                <td>
-                    <button class="view">View</button>
-                    <button class="edit">Edit</button>
-                    <button class="delete">Delete</button>
-                </td>
-            </tr>
+                <tr>
+                    <td>P1041</td>
+                    <td>Anita Sharma</td>
+                    <td>38</td>
+                    <td>Female</td>
+                    <td>X-Ray</td>
+                    <td class="processing">Processing</td>
+                    <td>
+                        <button onclick="viewPatient()">View</button>
+                        <button onclick="deletePatient(this)">Delete</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>P1050</td>
+                    <td>Kamal Verma</td>
+                    <td>50</td>
+                    <td>Male</td>
+                    <td>CT Scan</td>
+                    <td class="pending">Pending</td>
+                    <td>
+                        <button onclick="viewPatient()">View</button>
+                        <button onclick="deletePatient(this)">Delete</button>
+                    </td>
+                </tr>
+
+            </tbody>
 
         </table>
 

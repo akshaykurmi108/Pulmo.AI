@@ -8,6 +8,9 @@
 </head>
 
 <body>
+
+    <div id="notification"></div>
+
     <script src="settings.js"></script>
 
     <header>
@@ -16,14 +19,10 @@
 
             <div class="logo">
                 <img src="logo.jpg" alt="PulmoAi"> <span>PulmoAi</span>
-                <p>
-                <pre><h2>                                                     Settings</h2></pre>
-                </p>
+                <h2 style="margin-left:200px;">Settings</h2>
             </div>
 
-
-
-            <button class="login-btn">My Prodile</button>
+            <button class="login-btn">My Profile</button>
 
         </div>
 
@@ -54,31 +53,37 @@
 
         <div class="content">
 
-            <!-- SECURITY SETTINGS -->
+            <!-- PASSWORD FORM -->
 
             <div class="card">
 
                 <h2>Security Settings</h2>
 
-                <label>Current Password</label>
-                <input type="password">
+                <form id="passwordForm">
 
-                <label>New Password</label>
-                <input type="password">
+                    <label>Current Password</label>
+                    <input id="currentPassword" type="password" placeholder="Current Password">
 
-                <label>Confirm Password</label>
-                <input type="password">
+                    <label>New Password</label>
+                    <input id="newPassword" type="password" placeholder="New Password">
 
-                <button class="primary-btn">Update Password</button>
+                    <label>Confirm Password</label>
+                    <input id="confirmPassword" type="password" placeholder="Confirm Password">
+
+                    <button type="button" onclick="changePassword()">Update Password</button>
+
+                </form>
 
             </div>
 
 
-            <!-- 2FA + LOGIN ACTIVITY -->
+
+            <!-- DARK MODE + LOGIN ACTIVITY -->
 
             <div class="card">
 
                 <h3>Two-Factor Authentication (2FA)</h3>
+
                 <label class="switch">
                     <input type="checkbox">
                     <span class="slider"></span>
@@ -104,7 +109,10 @@
 
                 <h2>Notification Settings</h2>
 
-                <label><input type="checkbox"> Email Notifications</label>
+                <label>
+                    <input id="notificationToggle" type="checkbox" onclick="toggleNotifications()"> Enable Notifications
+                </label>
+
                 <label><input type="checkbox"> AI Analysis Results Alert</label>
                 <label><input type="checkbox"> Patient Report Updates</label>
                 <label><input type="checkbox"> System Notifications</label>
@@ -119,11 +127,11 @@
 
                 <h2>System Preferences</h2>
 
-                <label>Theme Mode</label>
-                <select>
-                    <option>Light Mode</option>
-                    <option>Dark Mode</option>
-                </select>
+                <label>
+                    <input type="checkbox" onclick="toggleDarkMode()"> Dark Mode
+                </label>
+
+                <br><br>
 
                 <label>Dashboard Layout</label>
                 <select>
@@ -136,6 +144,18 @@
                     <option>CT Scan</option>
                     <option>X-Ray</option>
                 </select>
+
+            </div>
+
+
+
+            <!-- SAVE SETTINGS + LOGOUT -->
+
+            <div class="card">
+
+                <button onclick="saveSettings()">Save Settings</button>
+
+                <button onclick="logout()">Logout</button>
 
             </div>
 
@@ -180,7 +200,6 @@
         </div>
 
     </div>
-
 
 
     <footer>

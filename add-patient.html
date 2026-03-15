@@ -7,11 +7,9 @@
     <title>Add New Patient</title>
 
     <link rel="stylesheet" href="add-patient.css">
-
 </head>
 
 <body>
-    <script src="add-patient.js"></script>
 
     <!-- NAVBAR -->
 
@@ -22,8 +20,6 @@
             <div class="logo">
                 <img src="logo.jpg" alt="PulmoAi"> <span>PulmoAi</span>
             </div>
-
-
 
             <button class="logout">Logout</button>
 
@@ -38,35 +34,36 @@
 
         <h1>[Add New Patient]</h1>
 
-
         <!-- PATIENT DETAILS -->
 
         <h2>1. Patient Details</h2>
 
-        <form>
+        <form id="patientForm" onsubmit="return validatePatientForm()">
 
             <label>Auto-Generated Patient ID</label>
-            <input type="text" placeholder="Generated automatically" disabled>
+            <input type="text" id="patientID" placeholder="Generated automatically" readonly>
 
-            <label>Full Name</label>
-            <input type="text">
+            <label>Patient Name</label>
+            <input type="text" id="name" placeholder="Patient Name">
+
+            <label>Date of Birth</label>
+            <input type="date" id="dob" onchange="calculateAge()">
 
             <label>Age</label>
-            <input type="number">
+            <input type="text" id="age" readonly>
 
             <label>Gender</label>
-            <select>
+            <select id="gender">
+                <option value="">Select Gender</option>
                 <option>Male</option>
                 <option>Female</option>
-                <option>Other</option>
             </select>
 
             <label>Phone Number</label>
-            <input type="text">
+            <input type="text" id="phone" placeholder="Phone">
 
             <label>Address</label>
             <input type="text">
-
 
             <!-- MEDICAL INFORMATION -->
 
@@ -87,7 +84,6 @@
             <label>Doctor Notes</label>
             <textarea rows="3"></textarea>
 
-
             <!-- SCAN UPLOAD -->
 
             <h2>3. Scan Upload & AI Analysis</h2>
@@ -103,7 +99,7 @@
                 <label>Scan Image Preview</label>
                 <input type="text" placeholder="Image preview area">
 
-                <button class="run-btn">Run AI Analysis</button>
+                <button type="button" class="run-btn">Run AI Analysis</button>
 
                 <div class="result-box">
                     <p>AI Result</p>
@@ -113,20 +109,34 @@
 
             </div>
 
-
             <!-- ACTION BUTTONS -->
 
             <div class="form-buttons">
 
-                <button class="save-btn">Save Patient</button>
+                <button type="submit" class="save-btn">Add Patient</button>
 
-                <button class="clear-btn">Clear Form</button>
+                <button type="reset" class="clear-btn">Clear Form</button>
 
             </div>
 
         </form>
 
     </section>
+
+
+    <!-- SUCCESS POPUP -->
+
+    <div id="successPopup" class="popup">
+
+        <div class="popup-box">
+
+            <h3>Patient Added Successfully</h3>
+
+            <button onclick="closePopup()">OK</button>
+
+        </div>
+
+    </div>
 
 
     <!-- FOOTER -->
@@ -154,6 +164,10 @@
         </div>
 
     </footer>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="add-patient.js"></script>
 
 </body>
 
