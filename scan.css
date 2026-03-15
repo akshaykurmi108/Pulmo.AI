@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Segoe UI;
+}
+
+body {
+    background: linear-gradient(135deg, #eaf3f9, #d9e7f0);
+}
+
+/* NAVBAR */
+
+header {
+    background: white;
+    padding: 15px 40px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 35px;
+}
+
+ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.login-btn {
+    background: #1f6d95;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+/* UPLOAD AREA */
+
+.upload-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.upload-box {
+    width: 400px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.upload-box input,
+.upload-box select {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.analyze-btn {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background: #1f6d95;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.analyze-btn:hover {
+    background: #15597a;
+}
+
+/* IMAGE PREVIEW */
+
+#preview {
+    margin-top: 10px;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* RESULT */
+
+.result-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.result-box {
+    width: 400px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}

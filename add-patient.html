@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Patient</title>
+
+    <link rel="stylesheet" href="add-patient.css">
+
+</head>
+
+<body>
+    <script src="add-patient.js"></script>
+
+    <!-- NAVBAR -->
+
+    <header>
+
+        <div class="navbar">
+
+            <div class="logo">
+                <img src="logo.jpg" alt="PulmoAi"> <span>PulmoAi</span>
+            </div>
+
+
+
+            <button class="logout">Logout</button>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN FORM -->
+
+    <section class="container">
+
+        <h1>[Add New Patient]</h1>
+
+
+        <!-- PATIENT DETAILS -->
+
+        <h2>1. Patient Details</h2>
+
+        <form>
+
+            <label>Auto-Generated Patient ID</label>
+            <input type="text" placeholder="Generated automatically" disabled>
+
+            <label>Full Name</label>
+            <input type="text">
+
+            <label>Age</label>
+            <input type="number">
+
+            <label>Gender</label>
+            <select>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+
+            <label>Phone Number</label>
+            <input type="text">
+
+            <label>Address</label>
+            <input type="text">
+
+
+            <!-- MEDICAL INFORMATION -->
+
+            <h2>2. Medical Information</h2>
+
+            <label>Symptoms</label>
+            <input type="text">
+
+            <label>Smoking History</label>
+            <input type="text">
+
+            <label>Previous Lung Disease</label>
+            <input type="text">
+
+            <label>Other Medical Conditions</label>
+            <input type="text">
+
+            <label>Doctor Notes</label>
+            <textarea rows="3"></textarea>
+
+
+            <!-- SCAN UPLOAD -->
+
+            <h2>3. Scan Upload & AI Analysis</h2>
+
+            <div class="scan-box">
+
+                <p>Scan Information</p>
+
+                <input type="file">
+
+                <p class="upload-text">Drag & Drop or Upload Scan (Chest X-Ray / CT Scan)</p>
+
+                <label>Scan Image Preview</label>
+                <input type="text" placeholder="Image preview area">
+
+                <button class="run-btn">Run AI Analysis</button>
+
+                <div class="result-box">
+                    <p>AI Result</p>
+                    <p>Probability of Disease: --- %</p>
+                    <p>Result: ---</p>
+                </div>
+
+            </div>
+
+
+            <!-- ACTION BUTTONS -->
+
+            <div class="form-buttons">
+
+                <button class="save-btn">Save Patient</button>
+
+                <button class="clear-btn">Clear Form</button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer">
+
+            <div class="left">
+                <p>© Copyright Early Lung Disease Detection</p>
+
+                <p class="desc">
+                    A machine learning based system for identifying lung diseases earlier,
+                    improving diagnostics and helping deliver better patient care.
+                </p>
+            </div>
+
+            <div class="right">
+                <h4>Quick Links</h4>
+                <p><a href="index.html">Home</a> |
+                    <a href="about.html">About</a>
+                </p>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

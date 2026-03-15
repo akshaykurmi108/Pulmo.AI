@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Upload Scan</title>
+    <link rel="stylesheet" href="scan.css">
+</head>
+
+<body>
+    <script src="scan.js"></script>
+
+    <header>
+        <div class="navbar">
+
+            <div class="logo">
+                <img src="logo.jpg" alt="PulmoAi">
+                <h2>PulmoAi</h2>
+            </div>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="add-patient.html">New Patient</a></li>
+                <li><a href="patientlist.html">Patient List</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="settings.html">Setting</a></li>
+            </ul>
+
+            <button class="login-btn">My profile</button>
+
+        </div>
+    </header>
+
+
+    <section class="upload-container">
+
+        <h1>Upload Patient Scan</h1>
+
+        <div class="upload-box">
+
+            <label>Patient Name</label>
+            <input type="text" placeholder="Enter Patient Name">
+
+            <label>Select Scan Type</label>
+            <select>
+                <option>CT Scan</option>
+                <option>X-Ray</option>
+                <option>MRI</option>
+            </select>
+
+            <label>Upload Scan Image</label>
+
+            <input type="file" id="scanUpload" accept="image/*">
+
+            <img id="preview">
+
+            <button class="analyze-btn">Analyze Scan</button>
+
+        </div>
+
+    </section>
+
+
+    <section class="result-section">
+
+        <h2>AI Analysis Result</h2>
+
+        <div class="result-box">
+
+            <p><b>Finding:</b> </p>
+            <p><b>Probability:</b> </p>
+            <p><b>Risk Level:</b> </p>
+            <p><b>Suggested Diagnosis:</b> </p>
+
+        </div>
+
+    </section>
+
+
+    <script>
+
+        const fileInput = document.getElementById("scanUpload");
+        const preview = document.getElementById("preview");
+
+        fileInput.onchange = evt => {
+            const [file] = fileInput.files
+            if (file) {
+                preview.src = URL.createObjectURL(file)
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

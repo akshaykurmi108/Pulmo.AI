@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Patients List</title>
+    <link rel="stylesheet" href="patientlist.css">
+</head>
+
+<body>
+    <script src="patientlist.js"></script>
+
+    <!-- NAVBAR -->
+
+    <header>
+        <div class="navbar">
+
+            <div class="logo">
+                <img src="logo.jpg" alt="PulmoAi">
+                <h2>PulmoAi</h2>
+            </div>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="add-patient.html">New Patient</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="settings.html">Setting</a></li>
+            </ul>
+
+            <button class="login-btn">Doctor Profile</button>
+
+        </div>
+    </header>
+
+
+    <!-- PAGE TITLE -->
+
+    <section class="page-title">
+
+        <h1>Patient List</h1>
+
+        <div class="search-filter">
+
+            <input type="text" placeholder="Search Patient">
+
+            <select>
+                <option>All</option>
+                <option>CT Scan</option>
+                <option>X-Ray</option>
+            </select>
+
+            <button class="add-btn"> <a href="add-patient.html">+ Add Patient</a></button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PATIENT TABLE -->
+
+    <section class="table-section">
+
+        <table>
+
+            <tr>
+                <th>Patient ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Scan Type</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+
+            <tr>
+                <td>P1023</td>
+                <td>Rahul Shelby</td>
+                <td>45</td>
+                <td>Male</td>
+                <td>CT Scan</td>
+                <td class="complete">Completed</td>
+                <td>
+                    <button class="view"><a href="patient.html">View</a></button>
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>P1041</td>
+                <td>Anita Sharma</td>
+                <td>38</td>
+                <td>Female</td>
+                <td>X-Ray</td>
+                <td class="processing">Processing</td>
+                <td>
+                    <button class="view">View</button>
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>P1050</td>
+                <td>Kamal Verma</td>
+                <td>50</td>
+                <td>Male</td>
+                <td>CT Scan</td>
+                <td class="pending">Pending</td>
+                <td>
+                    <button class="view">View</button>
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                </td>
+            </tr>
+
+        </table>
+
+    </section>
+
+</body>
+
+</html>

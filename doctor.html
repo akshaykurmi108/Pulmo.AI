@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor Dashboard</title>
+    <link rel="stylesheet" href="doctor.css">
+</head>
+
+<body>
+    <script src="doctor.js"></script>
+
+    <header>
+
+        <div class="navbar">
+
+            <div class="logo">
+                <img src="logo.jpg" alt="PulmoAi"> <span>PulmoAi</span>
+            </div>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="add-patient.html">New Patient</a></li>
+                <li><a href="patientlist.html">Patient List</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="settings.html">Setting</a></li>
+            </ul>
+
+            <button class="login-btn">My Profile</button>
+
+        </div>
+
+    </header>
+
+
+    <!-- PROFILE HEADER -->
+
+    <section class="profile-header">
+
+        <div class="profile-left">
+
+            <h2>Doctor Profile</h2>
+            <h1>Dr. Raj Sharma</h1>
+            <p>Pulmonologist | City Hospital</p>
+
+            <button class="edit-btn">Edit Profile</button>
+
+            <div class="stats">
+
+                <div>
+                    <h3>120</h3>
+                    <p>Total Patients</p>
+                </div>
+
+                <div>
+                    <h3>350</h3>
+                    <p>Scans Analyzed</p>
+                </div>
+
+                <div>
+                    <h3>340</h3>
+                    <p>Reports Generated</p>
+                </div>
+
+                <div>
+                    <h3>5</h3>
+                    <p>Pending Reports</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="profile-right">
+            <img src="doctor.jpg" alt="Doctor">
+            <button class="logout-btn">Logout</button>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- DASHBOARD STATS -->
+
+    <section class="dashboard-stats">
+
+        <div class="card">Total Patients <h2>120</h2>
+        </div>
+        <div class="card">Total Scans <h2>350</h2>
+        </div>
+        <div class="card">AI Diagnoses <h2>340</h2>
+        </div>
+        <div class="card">Pending Reports <h2>5</h2>
+        </div>
+
+    </section>
+
+
+    <!-- PATIENT LIST -->
+
+    <section class="patient-section">
+
+        <h2>Patient List</h2>
+
+        <input type="text" placeholder="Search Patient" class="search">
+
+        <table>
+
+            <tr>
+                <th>Patient Name</th>
+                <th>Age</th>
+                <th>Scan Type</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+
+            <tr>
+                <td>Rahul Shelby</td>
+                <td>45</td>
+                <td>CT Scan</td>
+                <td>12 May</td>
+                <td class="complete">Completed</td>
+                <td>View</td>
+            </tr>
+
+            <tr>
+                <td>Anita Sharma</td>
+                <td>38</td>
+                <td>X-Ray</td>
+                <td>10 May</td>
+                <td class="process">Processing</td>
+                <td>Upload</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+
+    <!-- QUICK SCAN -->
+
+    <section class="quick-scan">
+
+        <h2>Quick Scan Upload</h2>
+
+        <select>
+            <option>Select Patient</option>
+        </select>
+
+        <select>
+            <option>Select Scan Type</option>
+        </select>
+
+        <button class="analyze">Analyze Scan</button>
+
+    </section>
+
+
+    <!-- RESULT SECTION -->
+
+    <section class="results">
+
+        <div class="ai-result">
+
+            <h3>AI Diagnosis Result</h3>
+
+            <p>Findings: Possible Lung Nodule</p>
+            <p>Probability: 92%</p>
+            <p>Suggested Diagnosis: Possible Early Stage Cancer</p>
+
+        </div>
+
+
+        <div class="history">
+
+            <h3>Patient History</h3>
+
+            <ul>
+                <li>12 May 2026 – CT Scan – Normal</li>
+                <li>10 March 2026 – X-Ray – Pneumonia Detected</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- ACTIVITY -->
+
+    <section class="activity">
+
+        <h3>Recent Activity</h3>
+
+        <ul>
+            <li>Uploaded Scan for Anita Sharma</li>
+            <li>AI Report generated for Rahul Shelby</li>
+            <li>Analyzed CT Scan for Kamal Verma</li>
+        </ul>
+
+    </section>
+
+</body>
+
+</html>

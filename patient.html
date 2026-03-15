@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Details</title>
+    <link rel="stylesheet" href="patient.css">
+</head>
+
+<body>
+    <script src="patient.js"></script>
+
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo.jpg" alt="PulmoAi"> <span>PulmoAi</span>
+            </div>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="add-patient.html">New Patient</a></li>
+                <li><a href="patientlist.html">Patient List</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="settings.html">Setting</a></li>
+            </ul>
+
+            <button class="login-btn">User Profile</button>
+        </div>
+    </header>
+
+
+    <!-- PATIENT HEADER -->
+
+    <section class="patient-header">
+
+        <img src="patient.jpg" alt="Patient image" class="patient-img">
+
+        <div class="patient-info">
+            <h2>Patient Name: Rahul Shelby</h2>
+            <p>Age: 34 | Gender: Male | Patient ID: P1023</p>
+            <p>Doctor: Dr. Raj Sharma</p>
+            <p>Hospital: City Hospital</p>
+        </div>
+
+        <div class="patient-actions">
+            <button>Edit Patient Details</button>
+            <button>Upload New Scan</button>
+            <button>Generate Full Report</button>
+        </div>
+
+    </section>
+
+
+    <!-- QUICK STATS -->
+
+    <section class="stats">
+
+        <div class="card">
+            <h3>Total Scans</h3>
+            <h2>5</h2>
+        </div>
+
+        <div class="card">
+            <h3>AI Reports</h3>
+            <h2>5</h2>
+        </div>
+
+        <div class="card">
+            <h3>Last Scan Date</h3>
+            <h2>12 May</h2>
+        </div>
+
+        <div class="card">
+            <h3>Disease Risk</h3>
+            <h2>High</h2>
+        </div>
+
+    </section>
+
+
+    <!-- PROFILE DETAILS -->
+
+    <section class="profile-details">
+
+        <div class="box">
+
+            <h3>Personal Details</h3>
+
+            <p><b>Full Name:</b> Rahul Shelby</p>
+            <p><b>Age:</b> 45</p>
+            <p><b>Gender:</b> Male</p>
+            <p><b>Blood Group:</b> O+</p>
+            <p><b>Phone:</b> 0123-455-9771</p>
+
+        </div>
+
+        <div class="box">
+
+            <h3>Health Details</h3>
+
+            <p><b>Weight:</b> 45kg</p>
+            <p><b>Height:</b> 172cm</p>
+            <p><b>Smoking History:</b> 10 years</p>
+            <p><b>Allergies:</b> Penicillin</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SCAN HISTORY -->
+
+    <section class="scan-history">
+
+        <h2>Scan History</h2>
+
+        <table>
+
+            <tr>
+                <th>Date</th>
+                <th>Scan Type</th>
+                <th>Result</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+
+            <tr>
+                <td>12 May</td>
+                <td>CT Scan</td>
+                <td>Normal</td>
+                <td class="complete">Completed</td>
+                <td>View</td>
+            </tr>
+
+            <tr>
+                <td>10 May</td>
+                <td>X-Ray</td>
+                <td>Pneumonia</td>
+                <td class="complete">Completed</td>
+                <td>View</td>
+            </tr>
+
+            <tr>
+                <td>05 May</td>
+                <td>CT Scan</td>
+                <td>Processing</td>
+                <td class="pending">Pending</td>
+                <td>Generate Report</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+
+    <!-- AI RESULT -->
+
+    <section class="ai-result">
+
+        <img src="scan.png" alt="Lungs Image">
+
+        <div class="result-text">
+
+            <h3>AI Findings</h3>
+
+            <p>Possible Lung Nodule Detected</p>
+            <p>Probability: 92%</p>
+            <p>Risk Level: High</p>
+            <p>Suggested Diagnosis: Possible Early Lung Cancer</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- TIMELINE + NOTES -->
+
+    <section class="timeline-notes">
+
+        <div class="timeline">
+
+            <h3>Patient Timeline</h3>
+
+            <ul>
+                <li>12 May - CT Scan Uploaded</li>
+                <li>12 May - AI Analysis Completed</li>
+                <li>11 May - X-Ray Uploaded</li>
+                <li>10 May - Report Generated</li>
+            </ul>
+
+        </div>
+
+        <div class="notes">
+
+            <h3>Doctor Notes</h3>
+
+            <p>Patient shows early signs of lung abnormality.</p>
+
+            <button>Add Note</button>
+            <button>Edit Note</button>
+
+        </div>
+
+    </section>
+
+
+    <!-- DOWNLOAD REPORTS -->
+
+    <section class="reports">
+
+        <h2>Downloadable Reports</h2>
+
+        <table>
+
+            <tr>
+                <th>Report Name</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+
+            <tr>
+                <td>AI Report</td>
+                <td>12 May</td>
+                <td><button>Download</button></td>
+            </tr>
+
+            <tr>
+                <td>Scan Report</td>
+                <td>10 May</td>
+                <td><button>Download</button></td>
+            </tr>
+
+        </table>
+
+    </section>
+
+</body>
+
+</html>

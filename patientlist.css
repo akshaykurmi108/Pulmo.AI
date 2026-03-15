@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Segoe UI;
+}
+
+body {
+    background: linear-gradient(135deg, #e9f2f7, #d7e5ee);
+}
+
+/* NAVBAR */
+
+header {
+    background: white;
+    padding: 15px 40px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 35px;
+}
+
+ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.login-btn {
+    background: #1f6d95;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+/* TITLE SECTION */
+
+.page-title {
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-title h1 {
+    font-size: 28px;
+}
+
+.search-filter {
+    display: flex;
+    gap: 10px;
+}
+
+.search-filter input {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.search-filter select {
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.add-btn {
+    background: #1f6d95;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+}
+
+/* TABLE */
+
+.table-section {
+    padding: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+th {
+    background: #e8f2f7;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+/* STATUS COLORS */
+
+.complete {
+    color: green;
+    font-weight: bold;
+}
+
+.processing {
+    color: #0077cc;
+    font-weight: bold;
+}
+
+.pending {
+    color: orange;
+    font-weight: bold;
+}
+
+/* ACTION BUTTONS */
+
+button {
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.view {
+    background: #1f6d95;
+    color: white;
+}
+
+.edit {
+    background: #4caf50;
+    color: white;
+}
+
+.delete {
+    background: #e74c3c;
+    color: white;
+}
