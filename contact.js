@@ -2,32 +2,32 @@
    FORM VALIDATION
 ========================= */
 
-function validateContactForm(){
+function validateContactForm() {
 
-let name = document.getElementById("name").value.trim();
-let email = document.getElementById("email").value.trim();
-let message = document.getElementById("message").value.trim();
+   let name = document.getElementById("name").value.trim();
+   let email = document.getElementById("email").value.trim();
+   let message = document.getElementById("message").value.trim();
 
-let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+   let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
-if(name === ""){
-alert("Please enter your name");
-return false;
-}
+   if (name === "") {
+      alert("Please enter your name");
+      return false;
+   }
 
-if(!email.match(emailPattern)){
-alert("Enter a valid email address");
-return false;
-}
+   if (!email.match(emailPattern)) {
+      alert("Enter a valid email address");
+      return false;
+   }
 
-if(message.length < 10){
-alert("Message must be at least 10 characters");
-return false;
-}
+   if (message.length < 10) {
+      alert("Message must be at least 10 characters");
+      return false;
+   }
 
-showSuccessPopup();
+   showSuccessPopup();
 
-return false;
+   return false;
 
 }
 
@@ -36,13 +36,13 @@ return false;
    SUCCESS POPUP
 ========================= */
 
-function showSuccessPopup(){
+function showSuccessPopup() {
 
-let popup = document.getElementById("contactPopup");
+   let popup = document.getElementById("contactPopup");
 
-if(popup){
-popup.style.display="flex";
-}
+   if (popup) {
+      popup.style.display = "flex";
+   }
 
 }
 
@@ -51,11 +51,11 @@ popup.style.display="flex";
    CLOSE POPUP
 ========================= */
 
-function closePopup(){
+function closePopup() {
 
-document.getElementById("contactPopup").style.display="none";
+   document.getElementById("contactPopup").style.display = "none";
 
-document.getElementById("contactForm").reset();
+   document.getElementById("contactForm").reset();
 
 }
 
@@ -68,19 +68,19 @@ let inputs = document.querySelectorAll("input, textarea");
 
 inputs.forEach(input => {
 
-input.addEventListener("focus", function(){
+   input.addEventListener("focus", function () {
 
-input.style.borderColor="#1f6d95";
-input.style.boxShadow="0 0 5px rgba(31,109,149,0.3)";
+      input.style.borderColor = "#1f6d95";
+      input.style.boxShadow = "0 0 5px rgba(31,109,149,0.3)";
 
-});
+   });
 
-input.addEventListener("blur", function(){
+   input.addEventListener("blur", function () {
 
-input.style.borderColor="#ccc";
-input.style.boxShadow="none";
+      input.style.borderColor = "#ccc";
+      input.style.boxShadow = "none";
 
-});
+   });
 
 });
 
@@ -92,14 +92,14 @@ input.style.boxShadow="none";
 let messageBox = document.getElementById("message");
 let counter = document.getElementById("charCount");
 
-if(messageBox){
+if (messageBox) {
 
-messageBox.addEventListener("keyup", function(){
+   messageBox.addEventListener("keyup", function () {
 
-let length = messageBox.value.length;
+      let length = messageBox.value.length;
 
-counter.innerText = length + " characters";
+      counter.innerText = length + " characters";
 
-});
+   });
 
 }

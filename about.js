@@ -2,14 +2,14 @@
    PAGE FADE-IN ANIMATION
 ========================= */
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
 
-document.body.style.opacity = "0";
+   document.body.style.opacity = "0";
 
-setTimeout(function(){
-document.body.style.transition = "opacity 1s";
-document.body.style.opacity = "1";
-},100);
+   setTimeout(function () {
+      document.body.style.transition = "opacity 1s";
+      document.body.style.opacity = "1";
+   }, 100);
 
 });
 
@@ -22,15 +22,15 @@ let teamCards = document.querySelectorAll(".team-card");
 
 teamCards.forEach(card => {
 
-card.addEventListener("mouseover", function(){
-card.style.transform = "scale(1.05)";
-card.style.boxShadow = "0 10px 25px rgba(0,0,0,0.2)";
-});
+   card.addEventListener("mouseover", function () {
+      card.style.transform = "scale(1.05)";
+      card.style.boxShadow = "0 10px 25px rgba(0,0,0,0.2)";
+   });
 
-card.addEventListener("mouseout", function(){
-card.style.transform = "scale(1)";
-card.style.boxShadow = "none";
-});
+   card.addEventListener("mouseout", function () {
+      card.style.transform = "scale(1)";
+      card.style.boxShadow = "none";
+   });
 
 });
 
@@ -39,44 +39,44 @@ card.style.boxShadow = "none";
    STATISTICS COUNTER
 ========================= */
 
-function startCounter(id,target){
+function startCounter(id, target) {
 
-let element = document.getElementById(id);
+   let element = document.getElementById(id);
 
-if(!element) return;
+   if (!element) return;
 
-let count = 0;
+   let count = 0;
 
-let speed = target / 150;
+   let speed = target / 150;
 
-let interval = setInterval(function(){
+   let interval = setInterval(function () {
 
-count += speed;
+      count += speed;
 
-if(count >= target){
+      if (count >= target) {
 
-element.innerText = target;
-clearInterval(interval);
+         element.innerText = target;
+         clearInterval(interval);
 
-}
-else{
+      }
+      else {
 
-element.innerText = Math.floor(count);
+         element.innerText = Math.floor(count);
 
-}
+      }
 
-},20);
+   }, 20);
 
 }
 
 
 /* RUN COUNTER */
 
-window.addEventListener("load",function(){
+window.addEventListener("load", function () {
 
-startCounter("doctors",25);
-startCounter("patients",500);
-startCounter("scans",1200);
+   startCounter("doctors", 25);
+   startCounter("patients", 500);
+   startCounter("scans", 1200);
 
 });
 
@@ -85,22 +85,22 @@ startCounter("scans",1200);
    SCROLL REVEAL ANIMATION
 ========================= */
 
-window.addEventListener("scroll", function(){
+window.addEventListener("scroll", function () {
 
-let elements = document.querySelectorAll(".reveal");
+   let elements = document.querySelectorAll(".reveal");
 
-elements.forEach(function(el){
+   elements.forEach(function (el) {
 
-let position = el.getBoundingClientRect().top;
-let screenHeight = window.innerHeight;
+      let position = el.getBoundingClientRect().top;
+      let screenHeight = window.innerHeight;
 
-if(position < screenHeight - 100){
+      if (position < screenHeight - 100) {
 
-el.style.opacity = "1";
-el.style.transform = "translateY(0)";
-}
+         el.style.opacity = "1";
+         el.style.transform = "translateY(0)";
+      }
 
-});
+   });
 
 });
 
@@ -109,23 +109,23 @@ el.style.transform = "translateY(0)";
    MODAL POPUP (MORE INFO)
 ========================= */
 
-function openModal(){
+function openModal() {
 
-let modal = document.getElementById("aboutModal");
+   let modal = document.getElementById("aboutModal");
 
-if(modal){
-modal.style.display = "flex";
+   if (modal) {
+      modal.style.display = "flex";
+   }
+
 }
 
-}
+function closeModal() {
 
-function closeModal(){
+   let modal = document.getElementById("aboutModal");
 
-let modal = document.getElementById("aboutModal");
-
-if(modal){
-modal.style.display = "none";
-}
+   if (modal) {
+      modal.style.display = "none";
+   }
 
 }
 
@@ -136,27 +136,27 @@ modal.style.display = "none";
 
 let topButton = document.getElementById("topBtn");
 
-window.addEventListener("scroll", function(){
+window.addEventListener("scroll", function () {
 
-if(window.scrollY > 300){
+   if (window.scrollY > 300) {
 
-topButton.style.display = "block";
+      topButton.style.display = "block";
 
-}
-else{
+   }
+   else {
 
-topButton.style.display = "none";
+      topButton.style.display = "none";
 
-}
+   }
 
 });
 
-function scrollToTop(){
+function scrollToTop() {
 
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
+   window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+   });
 
 }
 
@@ -169,14 +169,14 @@ let buttons = document.querySelectorAll("button");
 
 buttons.forEach(btn => {
 
-btn.addEventListener("click", function(){
+   btn.addEventListener("click", function () {
 
-btn.style.transform = "scale(0.9)";
+      btn.style.transform = "scale(0.9)";
 
-setTimeout(()=>{
-btn.style.transform = "scale(1)";
-},200);
+      setTimeout(() => {
+         btn.style.transform = "scale(1)";
+      }, 200);
 
-});
+   });
 
 });

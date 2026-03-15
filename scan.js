@@ -2,20 +2,20 @@
    IMAGE PREVIEW AFTER UPLOAD
 ========================= */
 
-function previewScan(event){
+function previewScan(event) {
 
-let reader = new FileReader();
+   let reader = new FileReader();
 
-reader.onload = function(){
+   reader.onload = function () {
 
-let preview = document.getElementById("scanPreview");
+      let preview = document.getElementById("scanPreview");
 
-preview.src = reader.result;
-preview.style.display = "block";
+      preview.src = reader.result;
+      preview.style.display = "block";
 
-}
+   }
 
-reader.readAsDataURL(event.target.files[0]);
+   reader.readAsDataURL(event.target.files[0]);
 
 }
 
@@ -24,39 +24,39 @@ reader.readAsDataURL(event.target.files[0]);
    SIMULATE FILE UPLOAD
 ========================= */
 
-function uploadScan(){
+function uploadScan() {
 
-let fileInput = document.getElementById("scanFile");
+   let fileInput = document.getElementById("scanFile");
 
-if(fileInput.files.length === 0){
+   if (fileInput.files.length === 0) {
 
-alert("Please upload a scan image");
+      alert("Please upload a scan image");
 
-return;
+      return;
 
-}
+   }
 
-let progress = document.getElementById("uploadProgress");
+   let progress = document.getElementById("uploadProgress");
 
-let width = 0;
+   let width = 0;
 
-let interval = setInterval(function(){
+   let interval = setInterval(function () {
 
-width += 5;
+      width += 5;
 
-progress.style.width = width + "%";
+      progress.style.width = width + "%";
 
-if(width >= 100){
+      if (width >= 100) {
 
-clearInterval(interval);
+         clearInterval(interval);
 
-showNotification("Scan uploaded successfully");
+         showNotification("Scan uploaded successfully");
 
-startAIScan();
+         startAIScan();
 
-}
+      }
 
-},100);
+   }, 100);
 
 }
 
@@ -65,19 +65,19 @@ startAIScan();
    AI SCAN ANALYSIS
 ========================= */
 
-function startAIScan(){
+function startAIScan() {
 
-let loader = document.getElementById("aiLoader");
+   let loader = document.getElementById("aiLoader");
 
-loader.style.display = "block";
+   loader.style.display = "block";
 
-setTimeout(function(){
+   setTimeout(function () {
 
-loader.style.display = "none";
+      loader.style.display = "none";
 
-showResult();
+      showResult();
 
-},3000);
+   }, 3000);
 
 }
 
@@ -86,26 +86,26 @@ showResult();
    SCAN RESULT SIMULATION
 ========================= */
 
-function showResult(){
+function showResult() {
 
-let resultBox = document.getElementById("scanResult");
+   let resultBox = document.getElementById("scanResult");
 
-let probability = Math.random();
+   let probability = Math.random();
 
-if(probability > 0.6){
+   if (probability > 0.6) {
 
-resultBox.innerText = "Result: No Lung Disease Detected";
-resultBox.style.color = "green";
+      resultBox.innerText = "Result: No Lung Disease Detected";
+      resultBox.style.color = "green";
 
-}
-else{
+   }
+   else {
 
-resultBox.innerText = "Result: Possible Lung Disease Detected";
-resultBox.style.color = "red";
+      resultBox.innerText = "Result: Possible Lung Disease Detected";
+      resultBox.style.color = "red";
 
-}
+   }
 
-resultBox.style.display="block";
+   resultBox.style.display = "block";
 
 }
 
@@ -114,15 +114,15 @@ resultBox.style.display="block";
    REMOVE FILE
 ========================= */
 
-function removeFile(){
+function removeFile() {
 
-document.getElementById("scanFile").value = "";
+   document.getElementById("scanFile").value = "";
 
-document.getElementById("scanPreview").style.display="none";
+   document.getElementById("scanPreview").style.display = "none";
 
-document.getElementById("scanResult").style.display="none";
+   document.getElementById("scanResult").style.display = "none";
 
-document.getElementById("uploadProgress").style.width="0%";
+   document.getElementById("uploadProgress").style.width = "0%";
 
 }
 
@@ -131,21 +131,21 @@ document.getElementById("uploadProgress").style.width="0%";
    NOTIFICATION POPUP
 ========================= */
 
-function showNotification(message){
+function showNotification(message) {
 
-let box = document.getElementById("notification");
+   let box = document.getElementById("notification");
 
-if(!box) return;
+   if (!box) return;
 
-box.innerText = message;
+   box.innerText = message;
 
-box.style.display="block";
+   box.style.display = "block";
 
-setTimeout(()=>{
+   setTimeout(() => {
 
-box.style.display="none";
+      box.style.display = "none";
 
-},3000);
+   }, 3000);
 
 }
 
@@ -158,14 +158,14 @@ let buttons = document.querySelectorAll("button");
 
 buttons.forEach(btn => {
 
-btn.addEventListener("click", function(){
+   btn.addEventListener("click", function () {
 
-btn.style.transform="scale(0.95)";
+      btn.style.transform = "scale(0.95)";
 
-setTimeout(()=>{
-btn.style.transform="scale(1)";
-},200);
+      setTimeout(() => {
+         btn.style.transform = "scale(1)";
+      }, 200);
 
-});
+   });
 
 });

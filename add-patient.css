@@ -169,101 +169,101 @@ footer {
 
 /* LINK STYLE */
 
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
 
 /* HOVER EFFECTS */
 
-.logout:hover{
-    background:#1a6a8a;
+.logout:hover {
+    background: #1a6a8a;
 }
 
-.save-btn:hover{
-    background:#2f7c95;
+.save-btn:hover {
+    background: #2f7c95;
 }
 
-.clear-btn:hover{
-    background:#4c8599;
+.clear-btn:hover {
+    background: #4c8599;
 }
 
-.run-btn:hover{
-    background:#155d86;
+.run-btn:hover {
+    background: #155d86;
 }
 
 /* SCAN PREVIEW INPUT */
 
-.scan-box input[type="text"]{
-    background:#f8fbfd;
+.scan-box input[type="text"] {
+    background: #f8fbfd;
 }
 
 /* SUCCESS POPUP */
 
-.popup{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.4);
-    display:none;
-    justify-content:center;
-    align-items:center;
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
 }
 
-.popup-box{
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    text-align:center;
-    width:280px;
-    box-shadow:0 8px 25px rgba(0,0,0,0.2);
+.popup-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 280px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
-.popup-box button{
-    margin-top:15px;
-    padding:8px 20px;
-    border:none;
-    background:#2c7fa0;
-    color:white;
-    border-radius:6px;
-    cursor:pointer;
+.popup-box button {
+    margin-top: 15px;
+    padding: 8px 20px;
+    border: none;
+    background: #2c7fa0;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
 /* FOOTER LINKS */
 
-.footer a{
-    color:#1f6fa1;
-    font-weight:500;
+.footer a {
+    color: #1f6fa1;
+    font-weight: 500;
 }
 
 /* RESPONSIVE DESIGN */
 
-@media(max-width:950px){
+@media(max-width:950px) {
 
-.container{
-    width:90%;
-    padding:25px;
+    .container {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
 }
 
-.footer{
-    flex-direction:column;
-    gap:10px;
-    text-align:center;
-}
+@media(max-width:600px) {
 
-}
+    .form-buttons {
+        flex-direction: column;
+    }
 
-@media(max-width:600px){
-
-.form-buttons{
-    flex-direction:column;
-}
-
-.save-btn,
-.clear-btn{
-    width:100%;
-}
+    .save-btn,
+    .clear-btn {
+        width: 100%;
+    }
 
 }

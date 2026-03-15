@@ -2,16 +2,16 @@
    PAGE FADE IN ANIMATION
 ========================= */
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
 
-document.body.style.opacity = "0";
+   document.body.style.opacity = "0";
 
-setTimeout(function(){
+   setTimeout(function () {
 
-document.body.style.transition = "opacity 1s";
-document.body.style.opacity = "1";
+      document.body.style.transition = "opacity 1s";
+      document.body.style.opacity = "1";
 
-},100);
+   }, 100);
 
 });
 
@@ -20,18 +20,18 @@ document.body.style.opacity = "1";
    EDIT PATIENT DETAILS
 ========================= */
 
-function enableEdit(){
+function enableEdit() {
 
-let fields = document.querySelectorAll(".editable");
+   let fields = document.querySelectorAll(".editable");
 
-fields.forEach(field => {
+   fields.forEach(field => {
 
-field.removeAttribute("readonly");
-field.style.border = "1px solid #1f6d95";
+      field.removeAttribute("readonly");
+      field.style.border = "1px solid #1f6d95";
 
-});
+   });
 
-alert("You can now edit patient details");
+   alert("You can now edit patient details");
 
 }
 
@@ -40,18 +40,18 @@ alert("You can now edit patient details");
    SAVE PATIENT DETAILS
 ========================= */
 
-function saveDetails(){
+function saveDetails() {
 
-let fields = document.querySelectorAll(".editable");
+   let fields = document.querySelectorAll(".editable");
 
-fields.forEach(field => {
+   fields.forEach(field => {
 
-field.setAttribute("readonly",true);
-field.style.border="none";
+      field.setAttribute("readonly", true);
+      field.style.border = "none";
 
-});
+   });
 
-showNotification("Patient details updated successfully");
+   showNotification("Patient details updated successfully");
 
 }
 
@@ -60,17 +60,17 @@ showNotification("Patient details updated successfully");
    DELETE PATIENT
 ========================= */
 
-function deletePatient(){
+function deletePatient() {
 
-let confirmDelete = confirm("Are you sure you want to delete this patient?");
+   let confirmDelete = confirm("Are you sure you want to delete this patient?");
 
-if(confirmDelete){
+   if (confirmDelete) {
 
-alert("Patient record deleted");
+      alert("Patient record deleted");
 
-window.location.href="patient-list.html";
+      window.location.href = "patient-list.html";
 
-}
+   }
 
 }
 
@@ -79,24 +79,24 @@ window.location.href="patient-list.html";
    REPORT STATUS DISPLAY
 ========================= */
 
-function checkReport(){
+function checkReport() {
 
-let statusBox = document.getElementById("reportStatus");
+   let statusBox = document.getElementById("reportStatus");
 
-let result = Math.random();
+   let result = Math.random();
 
-if(result > 0.5){
+   if (result > 0.5) {
 
-statusBox.innerText = "No Lung Disease Detected";
-statusBox.style.color = "green";
+      statusBox.innerText = "No Lung Disease Detected";
+      statusBox.style.color = "green";
 
-}
-else{
+   }
+   else {
 
-statusBox.innerText = "Possible Lung Disease Detected";
-statusBox.style.color = "red";
+      statusBox.innerText = "Possible Lung Disease Detected";
+      statusBox.style.color = "red";
 
-}
+   }
 
 }
 
@@ -105,21 +105,21 @@ statusBox.style.color = "red";
    NOTIFICATION POPUP
 ========================= */
 
-function showNotification(message){
+function showNotification(message) {
 
-let box = document.getElementById("notification");
+   let box = document.getElementById("notification");
 
-if(!box) return;
+   if (!box) return;
 
-box.innerText = message;
+   box.innerText = message;
 
-box.style.display="block";
+   box.style.display = "block";
 
-setTimeout(()=>{
+   setTimeout(() => {
 
-box.style.display="none";
+      box.style.display = "none";
 
-},3000);
+   }, 3000);
 
 }
 
@@ -132,15 +132,15 @@ let buttons = document.querySelectorAll("button");
 
 buttons.forEach(btn => {
 
-btn.addEventListener("click", function(){
+   btn.addEventListener("click", function () {
 
-btn.style.transform="scale(0.95)";
+      btn.style.transform = "scale(0.95)";
 
-setTimeout(()=>{
-btn.style.transform="scale(1)";
-},200);
+      setTimeout(() => {
+         btn.style.transform = "scale(1)";
+      }, 200);
 
-});
+   });
 
 });
 
@@ -149,9 +149,9 @@ btn.style.transform="scale(1)";
    DOWNLOAD REPORT
 ========================= */
 
-function downloadReport(){
+function downloadReport() {
 
-alert("Patient report downloaded");
+   alert("Patient report downloaded");
 
 }
 
@@ -160,13 +160,13 @@ alert("Patient report downloaded");
    SCROLL TO TOP
 ========================= */
 
-function scrollTopPage(){
+function scrollTopPage() {
 
-window.scrollTo({
+   window.scrollTo({
 
-top:0,
-behavior:"smooth"
+      top: 0,
+      behavior: "smooth"
 
-});
+   });
 
 }

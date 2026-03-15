@@ -2,40 +2,40 @@
    DASHBOARD COUNTER ANIMATION
 ========================= */
 
-function startCounter(id,target){
+function startCounter(id, target) {
 
-let element = document.getElementById(id);
+   let element = document.getElementById(id);
 
-if(!element) return;
+   if (!element) return;
 
-let count = 0;
-let speed = target/150;
+   let count = 0;
+   let speed = target / 150;
 
-let interval = setInterval(function(){
+   let interval = setInterval(function () {
 
-count += speed;
+      count += speed;
 
-if(count >= target){
-element.innerText = target;
-clearInterval(interval);
-}
-else{
-element.innerText = Math.floor(count);
-}
+      if (count >= target) {
+         element.innerText = target;
+         clearInterval(interval);
+      }
+      else {
+         element.innerText = Math.floor(count);
+      }
 
-},20);
+   }, 20);
 
 }
 
 
 /* RUN COUNTERS */
 
-window.addEventListener("load",function(){
+window.addEventListener("load", function () {
 
-startCounter("totalPatients",120);
-startCounter("totalScans",350);
-startCounter("totalReports",340);
-startCounter("pendingReports",5);
+   startCounter("totalPatients", 120);
+   startCounter("totalScans", 625);
+   startCounter("totalReports", 340);
+   startCounter("pendingReports", 14);
 
 });
 
@@ -44,18 +44,18 @@ startCounter("pendingReports",5);
    EDIT PROFILE TOGGLE
 ========================= */
 
-function editProfile(){
+function editProfile() {
 
-let fields = document.querySelectorAll(".editable");
+   let fields = document.querySelectorAll(".editable");
 
-fields.forEach(field => {
+   fields.forEach(field => {
 
-field.removeAttribute("readonly");
-field.style.border="1px solid #1f6d95";
+      field.removeAttribute("readonly");
+      field.style.border = "1px solid #1f6d95";
 
-});
+   });
 
-alert("You can now edit your profile");
+   alert("You can now edit your profile");
 
 }
 
@@ -64,18 +64,18 @@ alert("You can now edit your profile");
    SAVE PROFILE
 ========================= */
 
-function saveProfile(){
+function saveProfile() {
 
-let fields = document.querySelectorAll(".editable");
+   let fields = document.querySelectorAll(".editable");
 
-fields.forEach(field => {
+   fields.forEach(field => {
 
-field.setAttribute("readonly",true);
-field.style.border="none";
+      field.setAttribute("readonly", true);
+      field.style.border = "none";
 
-});
+   });
 
-alert("Profile Updated Successfully");
+   alert("Profile Updated Successfully");
 
 }
 
@@ -84,15 +84,15 @@ alert("Profile Updated Successfully");
    LOGOUT CONFIRMATION
 ========================= */
 
-function logoutDoctor(){
+function logoutDoctor() {
 
-let confirmLogout = confirm("Are you sure you want to logout?");
+   let confirmLogout = confirm("Are you sure you want to logout?");
 
-if(confirmLogout){
+   if (confirmLogout) {
 
-window.location.href="login.html";
+      window.location.href = "login.html";
 
-}
+   }
 
 }
 
@@ -101,24 +101,24 @@ window.location.href="login.html";
    SEARCH PATIENT
 ========================= */
 
-function searchPatient(){
+function searchPatient() {
 
-let input = document.getElementById("searchPatient").value.toLowerCase();
+   let input = document.getElementById("searchPatient").value.toLowerCase();
 
-let rows = document.querySelectorAll(".patient-row");
+   let rows = document.querySelectorAll(".patient-row");
 
-rows.forEach(row => {
+   rows.forEach(row => {
 
-let name = row.children[0].innerText.toLowerCase();
+      let name = row.children[0].innerText.toLowerCase();
 
-if(name.includes(input)){
-row.style.display="";
-}
-else{
-row.style.display="none";
-}
+      if (name.includes(input)) {
+         row.style.display = "";
+      }
+      else {
+         row.style.display = "none";
+      }
 
-});
+   });
 
 }
 
@@ -131,15 +131,15 @@ let buttons = document.querySelectorAll("button");
 
 buttons.forEach(btn => {
 
-btn.addEventListener("click",function(){
+   btn.addEventListener("click", function () {
 
-btn.style.transform="scale(0.95)";
+      btn.style.transform = "scale(0.95)";
 
-setTimeout(()=>{
-btn.style.transform="scale(1)";
-},200);
+      setTimeout(() => {
+         btn.style.transform = "scale(1)";
+      }, 200);
 
-});
+   });
 
 });
 
@@ -148,19 +148,19 @@ btn.style.transform="scale(1)";
    NOTIFICATION POPUP
 ========================= */
 
-function showNotification(message){
+function showNotification(message) {
 
-let box = document.getElementById("notification");
+   let box = document.getElementById("notification");
 
-if(!box) return;
+   if (!box) return;
 
-box.innerText = message;
+   box.innerText = message;
 
-box.style.display="block";
+   box.style.display = "block";
 
-setTimeout(()=>{
-box.style.display="none";
-},3000);
+   setTimeout(() => {
+      box.style.display = "none";
+   }, 3000);
 
 }
 
@@ -169,11 +169,11 @@ box.style.display="none";
    SCROLL TO TOP
 ========================= */
 
-function scrollToTop(){
+function scrollToTop() {
 
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
+   window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+   });
 
 }

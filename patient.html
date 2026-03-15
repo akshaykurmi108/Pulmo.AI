@@ -9,231 +9,231 @@
 
 <body>
 
-<div id="notification"></div>
+    <div id="notification"></div>
 
-<header>
-    <div class="navbar">
-        <div class="logo">
-            <img src="logo.jpg" alt="PulmoAi"> <span>PulmoAi</span>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo.jpg" alt="PulmoAi"> <span>PulmoAi</span>
+            </div>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="add-patient.html">New Patient</a></li>
+                <li><a href="patientlist.html">Patient List</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="settings.html">Setting</a></li>
+            </ul>
+
+            <button class="login-btn"><a href="doctor.html">My Profile</a></button>
+        </div>
+    </header>
+
+
+    <!-- PATIENT HEADER -->
+
+    <section class="patient-header">
+
+        <img src="patient.jpg" alt="Patient image" class="patient-img">
+
+        <div class="patient-info">
+            <h2>Patient Name: Rahul Shelby</h2>
+            <p>Age: 34 | Gender: Male | Patient ID: P1023</p>
+            <p>Doctor: Dr. Raj Sharma</p>
+            <p>Hospital: City Hospital</p>
         </div>
 
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="add-patient.html">New Patient</a></li>
-            <li><a href="patientlist.html">Patient List</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="settings.html">Setting</a></li>
-        </ul>
+        <div class="patient-actions">
 
-        <button class="login-btn">User Profile</button>
-    </div>
-</header>
+            <button onclick="enableEdit()">Edit</button>
+            <button onclick="saveDetails()">Save</button>
+            <button onclick="deletePatient()">Delete</button>
 
+        </div>
 
-<!-- PATIENT HEADER -->
+    </section>
 
-<section class="patient-header">
 
-    <img src="patient.jpg" alt="Patient image" class="patient-img">
+    <!-- QUICK STATS -->
 
-    <div class="patient-info">
-        <h2>Patient Name: Rahul Shelby</h2>
-        <p>Age: 34 | Gender: Male | Patient ID: P1023</p>
-        <p>Doctor: Dr. Raj Sharma</p>
-        <p>Hospital: City Hospital</p>
-    </div>
+    <section class="stats">
 
-    <div class="patient-actions">
+        <div class="card">
+            <h3>Total Scans</h3>
+            <h2>5</h2>
+        </div>
 
-        <button onclick="enableEdit()">Edit</button>
-        <button onclick="saveDetails()">Save</button>
-        <button onclick="deletePatient()">Delete</button>
+        <div class="card">
+            <h3>AI Reports</h3>
+            <h2>5</h2>
+        </div>
 
-    </div>
+        <div class="card">
+            <h3>Last Scan Date</h3>
+            <h2>12 May</h2>
+        </div>
 
-</section>
+        <div class="card">
+            <h3>Disease Risk</h3>
+            <h2>High</h2>
+        </div>
 
+    </section>
 
-<!-- QUICK STATS -->
 
-<section class="stats">
+    <!-- PROFILE DETAILS -->
 
-    <div class="card">
-        <h3>Total Scans</h3>
-        <h2>5</h2>
-    </div>
+    <section class="profile-details">
 
-    <div class="card">
-        <h3>AI Reports</h3>
-        <h2>5</h2>
-    </div>
+        <div class="box">
 
-    <div class="card">
-        <h3>Last Scan Date</h3>
-        <h2>12 May</h2>
-    </div>
+            <h3>Personal Details</h3>
 
-    <div class="card">
-        <h3>Disease Risk</h3>
-        <h2>High</h2>
-    </div>
+            <label>Full Name</label>
+            <input class="editable" value="Rahul Shelby" readonly>
 
-</section>
+            <label>Age</label>
+            <input class="editable" value="45" readonly>
 
+            <label>Gender</label>
+            <input class="editable" value="Male" readonly>
 
-<!-- PROFILE DETAILS -->
+            <label>Phone</label>
+            <input class="editable" value="0123-455-9771" readonly>
 
-<section class="profile-details">
+        </div>
 
-    <div class="box">
+        <div class="box">
 
-        <h3>Personal Details</h3>
+            <h3>Health Details</h3>
 
-        <label>Full Name</label>
-        <input class="editable" value="Rahul Shelby" readonly>
+            <label>Weight</label>
+            <input class="editable" value="45kg" readonly>
 
-        <label>Age</label>
-        <input class="editable" value="45" readonly>
+            <label>Height</label>
+            <input class="editable" value="172cm" readonly>
 
-        <label>Gender</label>
-        <input class="editable" value="Male" readonly>
+            <label>Smoking History</label>
+            <input class="editable" value="10 years" readonly>
 
-        <label>Phone</label>
-        <input class="editable" value="0123-455-9771" readonly>
+            <label>Allergies</label>
+            <input class="editable" value="Penicillin" readonly>
 
-    </div>
+        </div>
 
-    <div class="box">
+    </section>
 
-        <h3>Health Details</h3>
 
-        <label>Weight</label>
-        <input class="editable" value="45kg" readonly>
+    <!-- SCAN HISTORY -->
 
-        <label>Height</label>
-        <input class="editable" value="172cm" readonly>
+    <section class="scan-history">
 
-        <label>Smoking History</label>
-        <input class="editable" value="10 years" readonly>
+        <h2>Scan History</h2>
 
-        <label>Allergies</label>
-        <input class="editable" value="Penicillin" readonly>
+        <table>
 
-    </div>
+            <tr>
+                <th>Date</th>
+                <th>Scan Type</th>
+                <th>Result</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
 
-</section>
+            <tr>
+                <td>12 May</td>
+                <td>CT Scan</td>
+                <td>Normal</td>
+                <td class="complete">Completed</td>
+                <td><button onclick="downloadReport()">Download Report</button></td>
+            </tr>
 
+            <tr>
+                <td>10 May</td>
+                <td>X-Ray</td>
+                <td>Pneumonia</td>
+                <td class="complete">Completed</td>
+                <td><button onclick="downloadReport()">Download Report</button></td>
+            </tr>
 
-<!-- SCAN HISTORY -->
+            <tr>
+                <td>05 May</td>
+                <td>CT Scan</td>
+                <td>Processing</td>
+                <td class="pending">Pending</td>
+                <td><button onclick="checkReport()">Analyze Report</button></td>
+            </tr>
 
-<section class="scan-history">
+        </table>
 
-    <h2>Scan History</h2>
+    </section>
 
-    <table>
 
-        <tr>
-            <th>Date</th>
-            <th>Scan Type</th>
-            <th>Result</th>
-            <th>Status</th>
-            <th>Action</th>
-        </tr>
+    <!-- REPORT STATUS -->
 
-        <tr>
-            <td>12 May</td>
-            <td>CT Scan</td>
-            <td>Normal</td>
-            <td class="complete">Completed</td>
-            <td><button onclick="downloadReport()">Download Report</button></td>
-        </tr>
+    <section class="report-status">
 
-        <tr>
-            <td>10 May</td>
-            <td>X-Ray</td>
-            <td>Pneumonia</td>
-            <td class="complete">Completed</td>
-            <td><button onclick="downloadReport()">Download Report</button></td>
-        </tr>
+        <h3>Report Status</h3>
 
-        <tr>
-            <td>05 May</td>
-            <td>CT Scan</td>
-            <td>Processing</td>
-            <td class="pending">Pending</td>
-            <td><button onclick="checkReport()">Analyze Report</button></td>
-        </tr>
+        <p id="reportStatus">Pending Analysis</p>
 
-    </table>
+        <button onclick="checkReport()">Analyze Report</button>
 
-</section>
+    </section>
 
 
-<!-- REPORT STATUS -->
+    <!-- AI RESULT -->
 
-<section class="report-status">
+    <section class="ai-result">
 
-    <h3>Report Status</h3>
+        <img src="scan.png" alt="Lungs Image">
 
-    <p id="reportStatus">Pending Analysis</p>
+        <div class="result-text">
 
-    <button onclick="checkReport()">Analyze Report</button>
+            <h3>AI Findings</h3>
 
-</section>
+            <p>Possible Lung Nodule Detected</p>
+            <p>Probability: 92%</p>
+            <p>Risk Level: High</p>
+            <p>Suggested Diagnosis: Possible Early Lung Cancer</p>
 
+        </div>
 
-<!-- AI RESULT -->
+    </section>
 
-<section class="ai-result">
 
-    <img src="scan.png" alt="Lungs Image">
+    <!-- DOWNLOAD REPORTS -->
 
-    <div class="result-text">
+    <section class="reports">
 
-        <h3>AI Findings</h3>
+        <h2>Downloadable Reports</h2>
 
-        <p>Possible Lung Nodule Detected</p>
-        <p>Probability: 92%</p>
-        <p>Risk Level: High</p>
-        <p>Suggested Diagnosis: Possible Early Lung Cancer</p>
+        <table>
 
-    </div>
+            <tr>
+                <th>Report Name</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
 
-</section>
+            <tr>
+                <td>AI Report</td>
+                <td>12 May</td>
+                <td><button onclick="downloadReport()">Download</button></td>
+            </tr>
 
+            <tr>
+                <td>Scan Report</td>
+                <td>10 May</td>
+                <td><button onclick="downloadReport()">Download</button></td>
+            </tr>
 
-<!-- DOWNLOAD REPORTS -->
+        </table>
 
-<section class="reports">
+    </section>
 
-    <h2>Downloadable Reports</h2>
-
-    <table>
-
-        <tr>
-            <th>Report Name</th>
-            <th>Date</th>
-            <th>Action</th>
-        </tr>
-
-        <tr>
-            <td>AI Report</td>
-            <td>12 May</td>
-            <td><button onclick="downloadReport()">Download</button></td>
-        </tr>
-
-        <tr>
-            <td>Scan Report</td>
-            <td>10 May</td>
-            <td><button onclick="downloadReport()">Download</button></td>
-        </tr>
-
-    </table>
-
-</section>
-
-<script src="patient.js"></script>
+    <script src="patient.js"></script>
 
 </body>
 

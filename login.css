@@ -166,93 +166,93 @@ footer {
 
 /* LINKS */
 
-a{
-text-decoration:none;
-color:#2f6f86;
+a {
+    text-decoration: none;
+    color: #2f6f86;
 }
 
-a:hover{
-text-decoration:underline;
+a:hover {
+    text-decoration: underline;
 }
 
 /* LOGIN MESSAGE */
 
-#loginMessage{
-margin-top:10px;
-font-size:14px;
-color:red;
-text-align:left;
-width:100%;
+#loginMessage {
+    margin-top: 10px;
+    font-size: 14px;
+    color: red;
+    text-align: left;
+    width: 100%;
 }
 
 /* SHOW PASSWORD CHECKBOX */
 
-label input[type="checkbox"]{
-width:auto;
-margin-right:5px;
+label input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
 }
 
-form label:last-of-type{
-display:flex;
-align-items:center;
-margin-top:10px;
-font-size:14px;
+form label:last-of-type {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 14px;
 }
 
 /* INPUT FOCUS */
 
-input:focus{
-outline:none;
-border:1px solid #2f6f86;
-box-shadow:0 0 4px rgba(47,111,134,0.3);
+input:focus {
+    outline: none;
+    border: 1px solid #2f6f86;
+    box-shadow: 0 0 4px rgba(47, 111, 134, 0.3);
 }
 
 /* FORGOT PASSWORD */
 
-.forgot a{
-color:#2f6f86;
-font-weight:500;
+.forgot a {
+    color: #2f6f86;
+    font-weight: 500;
 }
 
-.forgot a:hover{
-text-decoration:underline;
+.forgot a:hover {
+    text-decoration: underline;
 }
 
 /* CREATE ACCOUNT */
 
-.create span a{
-color:#2f6f86;
-font-weight:bold;
+.create span a {
+    color: #2f6f86;
+    font-weight: bold;
 }
 
 /* FOOTER LINKS */
 
-.footer-right a{
-color:#2f6f86;
-font-weight:500;
+.footer-right a {
+    color: #2f6f86;
+    font-weight: 500;
 }
 
-.footer-right a:hover{
-text-decoration:underline;
+.footer-right a:hover {
+    text-decoration: underline;
 }
 
 /* RESPONSIVE */
 
-@media(max-width:700px){
+@media(max-width:700px) {
 
-.login-card{
-width:90%;
-padding:30px;
-}
+    .login-card {
+        width: 90%;
+        padding: 30px;
+    }
 
-.footer-container{
-flex-direction:column;
-gap:10px;
-text-align:center;
-}
+    .footer-container {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
 
-.footer-right{
-text-align:center;
-}
+    .footer-right {
+        text-align: center;
+    }
 
 }

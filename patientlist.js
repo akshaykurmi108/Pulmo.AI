@@ -2,24 +2,24 @@
    SEARCH PATIENT
 ========================= */
 
-function searchPatient(){
+function searchPatient() {
 
-let input = document.getElementById("searchPatient").value.toLowerCase();
+   let input = document.getElementById("searchPatient").value.toLowerCase();
 
-let rows = document.querySelectorAll("#patientTable tbody tr");
+   let rows = document.querySelectorAll("#patientTable tbody tr");
 
-rows.forEach(row => {
+   rows.forEach(row => {
 
-let name = row.children[1].innerText.toLowerCase();
+      let name = row.children[1].innerText.toLowerCase();
 
-if(name.includes(input)){
-row.style.display="";
-}
-else{
-row.style.display="none";
-}
+      if (name.includes(input)) {
+         row.style.display = "";
+      }
+      else {
+         row.style.display = "none";
+      }
 
-});
+   });
 
 }
 
@@ -28,24 +28,24 @@ row.style.display="none";
    FILTER BY GENDER
 ========================= */
 
-function filterGender(){
+function filterGender() {
 
-let gender = document.getElementById("genderFilter").value;
+   let gender = document.getElementById("genderFilter").value;
 
-let rows = document.querySelectorAll("#patientTable tbody tr");
+   let rows = document.querySelectorAll("#patientTable tbody tr");
 
-rows.forEach(row => {
+   rows.forEach(row => {
 
-let patientGender = row.children[3].innerText;
+      let patientGender = row.children[3].innerText;
 
-if(gender === "All" || patientGender === gender){
-row.style.display="";
-}
-else{
-row.style.display="none";
-}
+      if (gender === "All" || patientGender === gender) {
+         row.style.display = "";
+      }
+      else {
+         row.style.display = "none";
+      }
 
-});
+   });
 
 }
 
@@ -54,19 +54,19 @@ row.style.display="none";
    DELETE PATIENT
 ========================= */
 
-function deletePatient(button){
+function deletePatient(button) {
 
-let confirmDelete = confirm("Are you sure you want to delete this patient?");
+   let confirmDelete = confirm("Are you sure you want to delete this patient?");
 
-if(confirmDelete){
+   if (confirmDelete) {
 
-let row = button.parentElement.parentElement;
+      let row = button.parentElement.parentElement;
 
-row.remove();
+      row.remove();
 
-showNotification("Patient deleted successfully");
+      showNotification("Patient deleted successfully");
 
-}
+   }
 
 }
 
@@ -75,9 +75,9 @@ showNotification("Patient deleted successfully");
    VIEW PATIENT DETAILS
 ========================= */
 
-function viewPatient(){
+function viewPatient() {
 
-window.location.href="patient-detail.html";
+   window.location.href = "patient.html";
 
 }
 
@@ -86,22 +86,22 @@ window.location.href="patient-detail.html";
    SORT PATIENTS BY NAME
 ========================= */
 
-function sortPatients(){
+function sortPatients() {
 
-let table = document.getElementById("patientTable");
+   let table = document.getElementById("patientTable");
 
-let rows = Array.from(table.rows).slice(1);
+   let rows = Array.from(table.rows).slice(1);
 
-rows.sort((a,b)=>{
+   rows.sort((a, b) => {
 
-let nameA = a.cells[1].innerText.toLowerCase();
-let nameB = b.cells[1].innerText.toLowerCase();
+      let nameA = a.cells[1].innerText.toLowerCase();
+      let nameB = b.cells[1].innerText.toLowerCase();
 
-return nameA.localeCompare(nameB);
+      return nameA.localeCompare(nameB);
 
-});
+   });
 
-rows.forEach(row => table.appendChild(row));
+   rows.forEach(row => table.appendChild(row));
 
 }
 
@@ -114,17 +114,17 @@ let tableRows = document.querySelectorAll("#patientTable tbody tr");
 
 tableRows.forEach(row => {
 
-row.addEventListener("mouseover", function(){
+   row.addEventListener("mouseover", function () {
 
-row.style.background="#f2f8fb";
+      row.style.background = "#f2f8fb";
 
-});
+   });
 
-row.addEventListener("mouseout", function(){
+   row.addEventListener("mouseout", function () {
 
-row.style.background="white";
+      row.style.background = "white";
 
-});
+   });
 
 });
 
@@ -133,20 +133,20 @@ row.style.background="white";
    NOTIFICATION POPUP
 ========================= */
 
-function showNotification(message){
+function showNotification(message) {
 
-let box = document.getElementById("notification");
+   let box = document.getElementById("notification");
 
-if(!box) return;
+   if (!box) return;
 
-box.innerText = message;
+   box.innerText = message;
 
-box.style.display="block";
+   box.style.display = "block";
 
-setTimeout(()=>{
+   setTimeout(() => {
 
-box.style.display="none";
+      box.style.display = "none";
 
-},3000);
+   }, 3000);
 
 }
