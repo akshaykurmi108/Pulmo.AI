@@ -32,10 +32,10 @@ function startCounter(id, target) {
 
 window.addEventListener("load", function () {
 
-   startCounter("totalPatients", 120);
-   startCounter("totalScans", 625);
-   startCounter("totalReports", 340);
-   startCounter("pendingReports", 14);
+   startCounter("totalPatients", 2);
+   startCounter("totalScans", 4);
+   startCounter("totalReports", 2);
+   startCounter("pendingReports", 1);
 
 });
 
