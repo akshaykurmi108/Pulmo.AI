@@ -24,9 +24,7 @@ function searchPatient() {
 }
 
 
-/* =========================
-   FILTER BY GENDER
-========================= */
+   // FILTER BY GENDER
 
 function filterGender() {
 
@@ -50,9 +48,7 @@ function filterGender() {
 }
 
 
-/* =========================
-   DELETE PATIENT
-========================= */
+   // DELETE PATIENT
 
 function deletePatient(button) {
 
@@ -70,10 +66,8 @@ function deletePatient(button) {
 
 }
 
-
-/* =========================
-   VIEW PATIENT DETAILS
-========================= */
+// 
+   // VIEW PATIENT DETAILS
 
 function viewPatient() {
 
@@ -82,9 +76,7 @@ function viewPatient() {
 }
 
 
-/* =========================
-   SORT PATIENTS BY NAME
-========================= */
+   // SORT PATIENTS BY NAME
 
 function sortPatients() {
 
@@ -106,9 +98,7 @@ function sortPatients() {
 }
 
 
-/* =========================
-   ROW HOVER ANIMATION
-========================= */
+   // ROW HOVER ANIMATION
 
 let tableRows = document.querySelectorAll("#patientTable tbody tr");
 
@@ -129,9 +119,7 @@ tableRows.forEach(row => {
 });
 
 
-/* =========================
-   NOTIFICATION POPUP
-========================= */
+   // NOTIFICATION POPUP
 
 function showNotification(message) {
 

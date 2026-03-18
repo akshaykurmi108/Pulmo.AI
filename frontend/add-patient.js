@@ -1,6 +1,4 @@
-/* =========================
-   AUTO GENERATE PATIENT ID
-========================= */
+   // AUTO GENERATE PATIENT ID
 
 window.addEventListener("load", function () {
 
@@ -15,9 +13,7 @@ window.addEventListener("load", function () {
 });
 
 
-/* =========================
-   CALCULATE AGE FROM DOB
-========================= */
+   // CALCULATE AGE FROM DOB
 
 function calculateAge() {
 
@@ -44,9 +40,7 @@ function calculateAge() {
 }
 
 
-/* =========================
-   FORM VALIDATION
-========================= */
+   // FORM VALIDATION
 
 function validatePatientForm() {
 
@@ -76,9 +70,7 @@ function validatePatientForm() {
 }
 
 
-/* =========================
-   SUCCESS POPUP
-========================= */
+   // SUCCESS POPUP
 
 function showSuccessPopup() {
 
@@ -89,9 +81,7 @@ function showSuccessPopup() {
 }
 
 
-/* =========================
-   CLOSE POPUP
-========================= */
+   // CLOSE POPUP
 
 function closePopup() {
 
@@ -102,9 +92,7 @@ function closePopup() {
 }
 
 
-/* =========================
-   INPUT HIGHLIGHT EFFECT
-========================= */
+   // INPUT HIGHLIGHT EFFECT
 
 let inputs = document.querySelectorAll("input,select");
 

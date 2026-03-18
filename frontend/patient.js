@@ -1,6 +1,4 @@
-/* =========================
-   PAGE FADE IN ANIMATION
-========================= */
+   // PAGE FADE IN ANIMATION
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -16,9 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-/* =========================
-   EDIT PATIENT DETAILS
-========================= */
+   // EDIT PATIENT DETAILS
 
 function enableEdit() {
 
@@ -36,9 +32,7 @@ function enableEdit() {
 }
 
 
-/* =========================
-   SAVE PATIENT DETAILS
-========================= */
+   // SAVE PATIENT DETAILS
 
 function saveDetails() {
 
@@ -56,9 +50,7 @@ function saveDetails() {
 }
 
 
-/* =========================
-   DELETE PATIENT
-========================= */
+   // DELETE PATIENT
 
 function deletePatient() {
 
@@ -75,9 +67,7 @@ function deletePatient() {
 }
 
 
-/* =========================
-   REPORT STATUS DISPLAY
-========================= */
+   // REPORT STATUS DISPLAY
 
 function checkReport() {
 
@@ -101,9 +91,7 @@ function checkReport() {
 }
 
 
-/* =========================
-   NOTIFICATION POPUP
-========================= */
+   // NOTIFICATION POPUP
 
 function showNotification(message) {
 
@@ -124,9 +112,7 @@ function showNotification(message) {
 }
 
 
-/* =========================
-   BUTTON CLICK ANIMATION
-========================= */
+   // BUTTON CLICK ANIMATION
 
 let buttons = document.querySelectorAll("button");
 
@@ -145,9 +131,7 @@ buttons.forEach(btn => {
 });
 
 
-/* =========================
-   DOWNLOAD REPORT
-========================= */
+   // DOWNLOAD REPORT
 
 function downloadReport() {
 
@@ -156,9 +140,7 @@ function downloadReport() {
 }
 
 
-/* =========================
-   SCROLL TO TOP
-========================= */
+   // SCROLL TO TOP
 
 function scrollTopPage() {
 

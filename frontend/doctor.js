@@ -1,6 +1,4 @@
-/* =========================
-   DASHBOARD COUNTER ANIMATION
-========================= */
+   // DASHBOARD COUNTER ANIMATION
 
 function startCounter(id, target) {
 
@@ -40,9 +38,7 @@ window.addEventListener("load", function () {
 });
 
 
-/* =========================
-   EDIT PROFILE TOGGLE
-========================= */
+   // EDIT PROFILE TOGGLE
 
 function editProfile() {
 
@@ -60,9 +56,7 @@ function editProfile() {
 }
 
 
-/* =========================
-   SAVE PROFILE
-========================= */
+   // SAVE PROFILE
 
 function saveProfile() {
 
@@ -80,9 +74,7 @@ function saveProfile() {
 }
 
 
-/* =========================
-   LOGOUT CONFIRMATION
-========================= */
+   // LOGOUT CONFIRMATION
 
 function logoutDoctor() {
 
@@ -97,9 +89,7 @@ function logoutDoctor() {
 }
 
 
-/* =========================
-   SEARCH PATIENT
-========================= */
+   // SEARCH PATIENT
 
 function searchPatient() {
 
@@ -123,9 +113,7 @@ function searchPatient() {
 }
 
 
-/* =========================
-   BUTTON CLICK ANIMATION
-========================= */
+   // BUTTON CLICK ANIMATION
 
 let buttons = document.querySelectorAll("button");
 
@@ -144,9 +132,7 @@ buttons.forEach(btn => {
 });
 
 
-/* =========================
-   NOTIFICATION POPUP
-========================= */
+   // NOTIFICATION POPUP
 
 function showNotification(message) {
 
@@ -165,9 +151,7 @@ function showNotification(message) {
 }
 
 
-/* =========================
-   SCROLL TO TOP
-========================= */
+   // SCROLL TO TOP
 
 function scrollToTop() {
 

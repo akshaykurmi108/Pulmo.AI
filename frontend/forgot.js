@@ -1,6 +1,4 @@
-/* =========================
-   EMAIL VALIDATION
-========================= */
+   // EMAIL VALIDATION
 
 function validateEmail() {
 
@@ -25,9 +23,7 @@ function validateEmail() {
 }
 
 
-/* =========================
-   SEND OTP (SIMULATION)
-========================= */
+   // SEND OTP (SIMULATION)
 
 function sendOTP() {
 
@@ -42,9 +38,7 @@ function sendOTP() {
 }
 
 
-/* =========================
-   VERIFY OTP
-========================= */
+   // VERIFY OTP
 
 function verifyOTP() {
 
@@ -68,9 +62,7 @@ function verifyOTP() {
 }
 
 
-/* =========================
-   RESET PASSWORD
-========================= */
+   // RESET PASSWORD
 
 function resetPassword() {
 
@@ -100,9 +92,7 @@ function resetPassword() {
 }
 
 
-/* =========================
-   INPUT HIGHLIGHT EFFECT
-========================= */
+   // INPUT HIGHLIGHT EFFECT
 
 let inputs = document.querySelectorAll("input");
 

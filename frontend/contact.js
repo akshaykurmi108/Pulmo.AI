@@ -1,6 +1,4 @@
-/* =========================
-   FORM VALIDATION
-========================= */
+   // FORM VALIDATION
 
 function validateContactForm() {
 
@@ -32,9 +30,7 @@ function validateContactForm() {
 }
 
 
-/* =========================
-   SUCCESS POPUP
-========================= */
+   // SUCCESS POPUP
 
 function showSuccessPopup() {
 
@@ -47,9 +43,7 @@ function showSuccessPopup() {
 }
 
 
-/* =========================
-   CLOSE POPUP
-========================= */
+   // CLOSE POPUP
 
 function closePopup() {
 
@@ -60,9 +54,7 @@ function closePopup() {
 }
 
 
-/* =========================
-   INPUT HIGHLIGHT EFFECT
-========================= */
+   // INPUT HIGHLIGHT EFFECT
 
 let inputs = document.querySelectorAll("input, textarea");
 
@@ -85,9 +77,7 @@ inputs.forEach(input => {
 });
 
 
-/* =========================
-   MESSAGE CHARACTER COUNTER
-========================= */
+   // MESSAGE CHARACTER COUNTER
 
 let messageBox = document.getElementById("message");
 let counter = document.getElementById("charCount");

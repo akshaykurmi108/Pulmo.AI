@@ -1,6 +1,4 @@
-/* =========================
-   PAGE FADE-IN ANIMATION
-========================= */
+   // PAGE FADE-IN ANIMATION
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -14,9 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-/* =========================
-   TEAM CARD HOVER EFFECT
-========================= */
+   // TEAM CARD HOVER EFFECT
 
 let teamCards = document.querySelectorAll(".team-card");
 
@@ -35,9 +31,7 @@ teamCards.forEach(card => {
 });
 
 
-/* =========================
-   STATISTICS COUNTER
-========================= */
+   // STATISTICS COUNTER
 
 function startCounter(id, target) {
 
@@ -81,9 +75,7 @@ window.addEventListener("load", function () {
 });
 
 
-/* =========================
-   SCROLL REVEAL ANIMATION
-========================= */
+   // SCROLL REVEAL ANIMATION
 
 window.addEventListener("scroll", function () {
 
@@ -105,9 +97,7 @@ window.addEventListener("scroll", function () {
 });
 
 
-/* =========================
-   MODAL POPUP (MORE INFO)
-========================= */
+   // MODAL POPUP (MORE INFO)
 
 function openModal() {
 
@@ -130,9 +120,7 @@ function closeModal() {
 }
 
 
-/* =========================
-   SCROLL TO TOP BUTTON
-========================= */
+   // SCROLL TO TOP BUTTON
 
 let topButton = document.getElementById("topBtn");
 
@@ -161,9 +149,7 @@ function scrollToTop() {
 }
 
 
-/* =========================
-   BUTTON CLICK EFFECT
-========================= */
+   // BUTTON CLICK EFFECT
 
 let buttons = document.querySelectorAll("button");
 

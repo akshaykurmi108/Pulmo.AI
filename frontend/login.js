@@ -1,6 +1,4 @@
-/* =========================
-   LOGIN VALIDATION
-========================= */
+   // LOGIN VALIDATION
 
 function loginUser() {
 
@@ -39,9 +37,7 @@ function loginUser() {
 }
 
 
-/* =========================
-   SHOW / HIDE PASSWORD
-========================= */
+   // SHOW / HIDE PASSWORD
 
 function togglePassword() {
 
@@ -57,9 +53,7 @@ function togglePassword() {
 }
 
 
-/* =========================
-   SHOW MESSAGE
-========================= */
+   // SHOW MESSAGE
 
 function showMessage(message, type = "error") {
 
@@ -83,9 +77,7 @@ function showMessage(message, type = "error") {
 }
 
 
-/* =========================
-   INPUT HIGHLIGHT EFFECT
-========================= */
+   // INPUT HIGHLIGHT EFFECT
 
 let inputs = document.querySelectorAll("input");
 
@@ -108,9 +100,7 @@ inputs.forEach(input => {
 });
 
 
-/* =========================
-   LOGIN BUTTON ANIMATION
-========================= */
+   // LOGIN BUTTON ANIMATION
 
 let loginBtn = document.getElementById("loginBtn");
 

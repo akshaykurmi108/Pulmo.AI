@@ -1,6 +1,4 @@
-/* =========================
-   NAVBAR SCROLL EFFECT
-========================= */
+//    NAVBAR SCROLL EFFECT
 
 window.addEventListener("scroll", function () {
 
@@ -18,13 +16,11 @@ window.addEventListener("scroll", function () {
 });
 
 
-/* =========================
-   SMOOTH SCROLL
-========================= */
+//    SMOOTH SCROLL
 
 document.querySelectorAll("nav a").forEach(anchor => {
 
-    anchor.addEventListener("click", function (e) {
+    anchor.addEventListener("click", function l(e) {
 
         e.preventDefault();
 
@@ -37,9 +33,9 @@ document.querySelectorAll("nav a").forEach(anchor => {
 });
 
 
-/* =========================
-   COUNTER ANIMATION
-========================= */
+
+//   COUNTER ANIMATION
+
 
 function animateCounter(id, target) {
 
@@ -68,9 +64,7 @@ function animateCounter(id, target) {
 }
 
 
-/* =========================
-   RUN COUNTERS ON LOAD
-========================= */
+//    RUN COUNTERS ON LOAD
 
 window.addEventListener("load", function () {
 
@@ -81,9 +75,7 @@ window.addEventListener("load", function () {
 });
 
 
-/* =========================
-   IMAGE SLIDER
-========================= */
+//    IMAGE SLIDER
 
 let slideIndex = 0;
 
@@ -110,9 +102,7 @@ function showSlides() {
 showSlides();
 
 
-/* =========================
-   SCROLL REVEAL ANIMATION
-========================= */
+//    SCROLL REVEAL ANIMATION
 
 window.addEventListener("scroll", function () {
 
@@ -133,36 +123,10 @@ window.addEventListener("scroll", function () {
 });
 
 
-/* =========================
-   WELCOME POPUP
-========================= */
-
-function showPopup() {
-
-    let popup = document.getElementById("popup");
-
-    if (popup) {
-        popup.style.display = "flex";
-    }
-
-}
-
-function closePopup() {
-
-    let popup = document.getElementById("popup");
-
-    if (popup) {
-        popup.style.display = "none";
-    }
-
-}
-
-setTimeout(showPopup, 2000);
 
 
-/* =========================
-   BUTTON CLICK ANIMATION
-========================= */
+
+//    BUTTON CLICK ANIMATION
 
 document.querySelectorAll("button").forEach(btn => {
 
