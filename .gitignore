@@ -3,3 +3,4 @@ venv/
 training/venv/
 __pycache__/
 *.pyc
+node_modules/
